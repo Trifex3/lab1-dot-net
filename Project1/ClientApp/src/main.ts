@@ -8,8 +8,15 @@ export function getBaseUrl() {
   return document.getElementsByTagName('base')[0].href;
 }
 
+export function getApiUrl() {//vreau sa diferentiezi front-endul de api si at api (chestiile apelalte de angular) vor fi intotdeauna
+                            //adresa / api / endpoint, daca lipseste api at tine de web
+  return '/api/';
+}
+
+
 const providers = [
-  { provide: 'BASE_URL', useFactory: getBaseUrl, deps: [] }
+  { provide: 'BASE_URL', useFactory: getBaseUrl, deps: [] },
+  { provide: 'API_URL', useFactory: getApiUrl, deps: [] }
 ];
 
 if (environment.production) {

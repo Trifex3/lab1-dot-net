@@ -1,4 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+﻿ using Microsoft.EntityFrameworkCore.Migrations;
 using System;
 
 namespace Project1.Data.Migrations
